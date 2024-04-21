@@ -35,14 +35,10 @@ Stability AI's Stable Video Diffusion XT (SVT-XT) 1.1 foundation model is a diff
       </br><a href="https://www.pexels.com/photo/close-up-of-beer-glass-against-black-background-255483/">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="videos/coffee_1.gif" alt="Turkish Coffee" width="256"/>
+      <td><img src="video_samples/coffee_1.gif" alt="Turkish Coffee" width="256"/>
       </br><a href="https://www.pexels.com/photo/a-shot-of-steaming-pot-with-a-and-glass-with-a-beverage-10351409">Source image</a></td>
       <td><img src="videos/colored_smoke_2.webp" alt="Colored Smoke" width="387"/>
       </br><a href="https://www.pexels.com/photo/red-smoke-illustration-604671/">Source image</a></td>
-   </tr>
-   <tr>
-      <td><img src="videos/neon_ramen_cat.webp" alt="Neon Ramen Car" width="387"/>
-      </br><a href="https://www.pexels.com/photo/gato-otaku-19138491//">Source image</a></td>
    </tr>
 </table>
 </br>
