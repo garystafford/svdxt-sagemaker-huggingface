@@ -250,3 +250,6 @@ csv_data/*.json
 csv_data/node_modules/
 
 .vscode/
+
+
+.$async_inference.drawio.bkp
