@@ -1,11 +1,13 @@
 import base64
-import torch
+import logging
 from io import BytesIO
+
+import torch
 from diffusers import StableVideoDiffusionPipeline
 from diffusers.utils import load_image
-import logging
 
 logger = logging.getLogger(__name__)
+
 
 # base code reference: https://github.com/huggingface/diffusers/issues/6956
 
@@ -29,7 +31,7 @@ def predict_fn(data, pipe):
 
     logger.info(f"data: {data}")
 
-    # extract inference paramters
+    # get prompt & parameters
     prompt = data.pop("inputs", data)
     width = data.pop("width", 1024)
     height = data.pop("height", 576)
@@ -39,17 +41,16 @@ def predict_fn(data, pipe):
     max_guidance_scale = data.pop("max_guidance_scale", 3.0)
     fps = data.pop("fps", 6)
     motion_bucket_id = data.pop("motion_bucket_id", 127)
-    noise_aug_strength = data.pop("noise_aug_strength", 0.1)
+    noise_aug_strength = data.pop("noise_aug_strength", 0.02)
     decode_chunk_size = data.pop("decode_chunk_size", 8)
     seed = data.pop("seed", 42)
 
-    # prepare image
     image = load_image(prompt)
     image = image.resize((width, height))
 
     generator = torch.manual_seed(seed)
 
-    # inference
+    # invoke model
     frames = pipe(
         image,
         width=width,
@@ -69,9 +70,8 @@ def predict_fn(data, pipe):
     encoded_frames = []
     for image in frames:
         buffered = BytesIO()
-        # reference: https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#jpeg
         image.save(buffered, format="JPEG", quality=95, subsampling=0)
         encoded_frames.append(base64.b64encode(buffered.getvalue()).decode())
 
-    # return response
+    # create response
     return {"frames": encoded_frames}
