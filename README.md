@@ -35,6 +35,10 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?ur
    <tr>
       <td><img src="video_samples/coffee_1.gif" alt="Turkish Coffee" width="288"/>
       </br><a href="https://www.pexels.com/photo/a-shot-of-steaming-pot-with-a-and-glass-with-a-beverage-10351409">Source image</a></td>
+      <td><img src="video_samples/champagne_2.gif" alt="Champagne" width="288"/>
+      </br><a href="Photo by Pixabay: https://www.pexels.com/photo/close-up-of-beer-glass-against-black-background-255483">Source image</a></td>
+   </tr>
+   <tr>
       <td><img src="video_samples/color_smoke_tall_1.gif" alt="Colored Smoke" width="288"/>
       </br><a href="https://www.pexels.com/photo/red-smoke-illustration-604671">Source image</a></td>
       <td><img src="video_samples/smoke_tall_1.gif" alt="Smoke" width="288"/>
