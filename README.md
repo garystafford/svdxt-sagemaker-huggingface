@@ -1,10 +1,10 @@
 # Stable Video Diffusion XT 1.1 on Amazon SageMaker
 
-Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?url=https%3A%2F%2Fstability.ai%2Fstable-video) foundation model is a diffusion model that takes in a still image as a conditioning frame and generates a video from it. The notebook walks through creating and invoking an [asynchronous inference endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html) backed by the SVT-XT foundation model on Amazon SageMaker.
+Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?url=https%3A%2F%2Fstability.ai%2Fstable-video) foundation model is a diffusion model that takes in a still image as a conditioning frame and generates a video from it. The [Jupyter Notebook](svd_xt_demo.ipynb) walks through creating and invoking an [asynchronous inference endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html) backed by the SVT-XT foundation model on Amazon SageMaker.
 
 ## Architecture
 
-![Architecture](./architecture/async_inference.png)
+![Architecture](architecture/async_inference.png)
 
 ## Wide-format Videos
 
@@ -43,7 +43,9 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?ur
 </table>
 </br>
 
-## Local Environment
+## Optional: Local Environment
+
+Setup local environment to modify `inference.py` file.
 
 ```sh
 python3 -m pip install virtualenv -Uq
