@@ -2,6 +2,10 @@
 
 Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?url=https%3A%2F%2Fstability.ai%2Fstable-video) foundation model is a diffusion model that takes in a still image as a conditioning frame and generates a video from it. The notebook walks through creating and invoking an [asynchronous inference endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html) backed by the SVT-XT foundation model on Amazon SageMaker.
 
+## Architecture
+
+![Architecture](./architecture/async_inference.png)
+
 ## Wide-format Videos
 
 <table>
@@ -38,6 +42,30 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?ur
    </tr>
 </table>
 </br>
+
+## Local Environment
+
+```sh
+python3 -m pip install virtualenv -Uq
+virtualenv svd-venv
+python3 -m venv svd-venv
+
+source svd-venv/bin/activate
+```
+
+```sh
+python3 -m pip install -r requirements.txt -Uq
+```
+
+## References
+
+- <https://github.com/huggingface/notebooks/blob/main/sagemaker/23_stable_diffusion_inference/sagemaker-notebook.ipynb>
+- <https://github.com/huggingface/diffusers/issues/6956>
+- <https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt/tree/main>
+- <https://www.philschmid.de/sagemaker-stable-diffusion>
+- <https://huggingface.co/docs/diffusers/en/using-diffusers/svd>
+- <https://github.com/philschmid/huggingface-inferentia2-samples/blob/main/stable-diffusion-xl/sagemaker-notebook.ipynb>
+- <https://github.com/aws-samples/amazon-sagemaker-asynchronous-inference-computer-vision/blob/main/mask-rcnn-async-inference.ipynb>
 
 ---
 
