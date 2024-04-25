@@ -30,7 +30,7 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?ur
       </br><a href="https://www.pexels.com/photo/seinboat-sunrise-20544112">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="video_samples/false_god_1.gif" alt="Boat on Shore" width="768"/>
+      <td><img src="video_samples/false_god_1_pingpong.gif" alt="Boat on Shore" width="768"/>
       </br>Source image generated with SDXL</a></td>
    </tr>
    <tr>
