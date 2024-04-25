@@ -34,6 +34,10 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?ur
       </br>Source image generated with SDXL</a></td>
    </tr>
    <tr>
+      <td><img src="video_samples/false_gods_2_pingpong.gif" alt="Boat on Shore" width="768"/>
+      </br>Source image generated with SDXL</a></td>
+   </tr>
+   <tr>
       <td><img src="video_samples/rocket_1.gif" alt="Rocket" width="768"/>
       </br><a href="https://cdn-lfs.huggingface.co/datasets/huggingface/documentation-images/83e7729b516ba725cb2283eb397ec2c77fc4b120f52a83801f610eac353b63c4?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27rocket.png%3B+filename%3D%22rocket.png%22%3B&response-content-type=image%2Fpng&Expires=1713928309&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcxMzkyODMwOX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy5odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9odWdnaW5nZmFjZS9kb2N1bWVudGF0aW9uLWltYWdlcy84M2U3NzI5YjUxNmJhNzI1Y2IyMjgzZWIzOTdlYzJjNzdmYzRiMTIwZjUyYTgzODAxZjYxMGVhYzM1M2I2M2M0P3Jlc3BvbnNlLWNvbnRlbnQtZGlzcG9zaXRpb249KiZyZXNwb25zZS1jb250ZW50LXR5cGU9KiJ9XX0_&Signature=pokKCBg3BgH-9jjbWu1DnDc%7EsmHLz09YNgCAhcfgTXSDXJxQUaQ2JoiT7ofYcogeAGYLf%7EJhUAhfY2eDIWdDABVnbO79iTfcxm%7EmadxCU2o4PCXhNW0IvB67Q2G2hWwYL4mzaIVc2ko5PN-jsAMrY-X-XZn2Pt71C9K-E3MpL%7Ea1nprA5c%7EuY1aeE4gAjmAJe337bJrL5DPB2C1cIp0PnZBcZKoNnB3bwkC-y3l%7ENDt8KThha90ULy0qQra6vG4rOaz-Pljhb8INtlubZxkUBTwN2sqoUkDYSByG2pc7kcDqJmhWqaeOT7nUZ5JkhZptoHtWcsdXHey-iWnnlH7JdA__&Key-Pair-Id=KVTP0A1DKRTAX">Source image</a></td>
    </tr>
