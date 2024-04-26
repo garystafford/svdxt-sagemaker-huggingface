@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 def model_fn(model_dir):
     logger.info(f"model_dir: {model_dir}")
+
     pipe = StableVideoDiffusionPipeline.from_pretrained(
         model_dir,
         torch_dtype=torch.float16,
