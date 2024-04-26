@@ -8,6 +8,8 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?ur
 
 ## Wide-format Videos
 
+All videos created using Notebook included in this project.
+
 <table>
    <tr>
       <td><img src="video_samples/rocket_1.gif" alt="Rocket" width="768"/>
@@ -44,6 +46,8 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?ur
 </table>
 
 ## Tall-format Videos
+
+All videos created using Notebook included in this project.
 
 <table>
    <tr>
