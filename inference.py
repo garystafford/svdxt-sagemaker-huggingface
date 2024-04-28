@@ -7,10 +7,10 @@ from diffusers import StableVideoDiffusionPipeline
 from diffusers.utils import load_image
 
 
-# author: Gary A. Stafford
-# purpose: custom inference script for SVD-XT 1.1
-# date: 2024-04-28
-# license: MIT License
+# Author: Gary A. Stafford
+# Purpose: Custom SageMaker inference script for SVD-XT 1.1 model
+# Date: 2024-04-28
+# License: MIT License
 
 logger = logging.getLogger(__name__)
 
