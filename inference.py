@@ -6,15 +6,17 @@ import torch
 from diffusers import StableVideoDiffusionPipeline
 from diffusers.utils import load_image
 
+
+# author: Gary A. Stafford
+# purpose: custom inference script for SVD-XT 1.1
+# date: 2024-04-28
+# license: MIT License
+
 logger = logging.getLogger(__name__)
-
-
-# base code reference: https://github.com/huggingface/diffusers/issues/6956
 
 
 def model_fn(model_dir):
     logger.info(f"model_dir: {model_dir}")
-
     pipe = StableVideoDiffusionPipeline.from_pretrained(
         model_dir,
         torch_dtype=torch.float16,
