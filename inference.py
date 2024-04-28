@@ -11,6 +11,7 @@ from diffusers.utils import load_image
 # Purpose: Custom SageMaker inference script for SVD-XT 1.1 model
 # Date: 2024-04-28
 # License: MIT License
+# Available parameters: https://github.com/huggingface/diffusers/blob/ae05050db9d37d5af48a6cd0d6510a5ffb1c1cd4/src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py#L339
 
 logger = logging.getLogger(__name__)
 
@@ -29,9 +30,6 @@ def model_fn(model_dir):
 
 
 def predict_fn(data, pipe):
-
-    # available parameters: https://github.com/huggingface/diffusers/blob/ae05050db9d37d5af48a6cd0d6510a5ffb1c1cd4/src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py#L339
-
     logger.info(f"data: {data}")
 
     # get prompt & parameters
