@@ -1,9 +1,8 @@
 # Stable Video Diffusion XT 1.1 on Amazon SageMaker
 
-Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://medium.com/r/?url=https%3A%2F%2Fstability.ai%2Fstable-video) foundation model is a diffusion model that takes in a still image as a conditioning frame and generates a short 4 second video. The notebook walks through configuring, creating, and invoking an [Asynchronous Inference Endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html) backed by the SVT-XT foundation model on Amazon SageMaker.
+Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://stability.ai/stable-video) foundation model, available on [Hugging Face](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid-xt-1-1), is a diffusion model that takes in a still image as a conditioning frame and generates a short 4 second video. The notebook walks through configuring, creating, and invoking an [Asynchronous Inference Endpoint](https://docs.aws.amazon.com/sagemaker/latest/dg/async-inference.html) backed by the SVT-XT foundation model on Amazon SageMaker.
 
-For more information on using this repository, read the associated blog post, [Generative AI Videos with Stability AI’s Stable Video Diffusion XT using Asynchronous Inference on Amazon SageMaker
-](https://garystafford.medium.com/generative-ai-videos-with-stability-ais-stable-video-diffusion-xt-using-asynchronous-inference-on-6810e0a7cab6).
+For more information on using this repository, read the associated blog post, [Generative AI Videos with Stability AI’s Stable Video Diffusion XT using Asynchronous Inference on Amazon SageMaker](https://garystafford.medium.com/generative-ai-videos-with-stability-ais-stable-video-diffusion-xt-using-asynchronous-inference-on-6810e0a7cab6).
 
 ## Architecture
 
