@@ -12,31 +12,31 @@ All videos created using Notebook included in this project.
 
 <table>
    <tr>
-      <td><img src="video_samples/rocket_1.gif" alt="Rocket" width="512"/>
+      <td><img src="video_samples/rocket_1.gif" alt="Rocket" width="615"/>
       </br><a href="https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/diffusers/svd/rocket.png">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="video_samples/red_car_1.gif" alt="Red Sports Car" width="512"/>
+      <td><img src="video_samples/red_car_1.gif" alt="Red Sports Car" width="615"/>
       </br><a href="https://www.pexels.com/photo/red-alfa-romeo-c4-on-road-near-trees-210019">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="video_samples/beach_bike_2.gif" alt="Motorcycle on Beach" width="512"/>
+      <td><img src="video_samples/beach_bike_2.gif" alt="Motorcycle on Beach" width="615"/>
       </br><a href="https://www.pexels.com/photo/photo-of-man-riding-bicycle-4054069">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="video_samples/koi_2.gif" alt="Koi" width="512"/>
+      <td><img src="video_samples/koi_2.gif" alt="Koi" width="615"/>
       </br><a href="https://unsplash.com/photos/two-koi-fish-swimming-DpI3yVVeJyA">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="video_samples/waterfall_2.gif" alt="Tropical Waterfall" width="512"/>
+      <td><img src="video_samples/waterfall_2.gif" alt="Tropical Waterfall" width="615"/>
       </br><a href="https://www.pexels.com/photo/time-lapse-photography-of-waterfall-2406388">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="video_samples/boat_ocean_1.gif" alt="Boat on Shore" width="512"/>
+      <td><img src="video_samples/boat_ocean_1.gif" alt="Boat on Shore" width="615"/>
       </br><a href="https://www.pexels.com/photo/seinboat-sunrise-20544112">Source image</a></td>
    </tr>
    <tr>
-      <td><img src="video_samples/false_gods_1_pingpong.gif" alt="AI" width="512"/>
+      <td><img src="video_samples/false_gods_1_pingpong.gif" alt="AI" width="615"/>
       </br>Source image generated with Stable Diffusion XL (SDXL) 1.0</a></td>
    </tr>
 </table>
