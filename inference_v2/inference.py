@@ -31,10 +31,10 @@ def model_fn(model_dir):
 
 
 def predict_fn(data, pipe):
-    logger.info(f"data: {data}")
+    # logger.info(f"data: {data}")
 
     # get image and parameters
-    image_raw = data.pop("image", data)
+    image_raw = data.pop("image")
     width = data.pop("width", 1024)
     height = data.pop("height", 576)
     num_frames = data.pop("num_frames", 25)
