@@ -6,9 +6,9 @@ For more information on using this repository, read the associated blog post, [G
 
 ## Notebook Versions
 
-* __Public URL for Conditioning Image__: Version 1 of the Notebook, [svd_xt_demo_v1.ipynb](svd_xt_demo_v1.ipynb), accepts publicly accessible URL of the image as opposed to v2 of the Notebook that accepted an image as input. Use corresponding custom inference script, [inference_v1/inference.py](inference_v1/inference.py).
+* __Public URL for Conditioning Image__: Version 1 of the Notebook, [svd_xt_demo_v1.ipynb](svd_xt_demo_v1.ipynb), passes a publicly accessible URL of the image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v1/inference.py](inference_v1/inference.py).
 
-* __Conditioning Image Passed in Request Payload__: Version 2 of the Notebook, [svd_xt_demo_v2.ipynb](svd_xt_demo_v2.ipynb), accepts an image as input as opposed to original v1 of the Notebook that accepted a publicly accessible URL of the image. The encoded image is passed in the request payload. Use corresponding custom inference script, [inference_v2/inference.py](inference_v2/inference.py).
+* __Conditioning Image Passed in Request Payload__: Version 2 of the Notebook, [svd_xt_demo_v2.ipynb](svd_xt_demo_v2.ipynb), passes an encoded image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v2/inference.py](inference_v2/inference.py).
 
 ## Architecture for Version 1: Public URL for Conditioning Image
 
