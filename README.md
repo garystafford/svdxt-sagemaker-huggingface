@@ -4,9 +4,19 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://stability.ai/sta
 
 For more information on using this repository, read the associated blog post, [Generative AI Videos with Stability AI’s Stable Video Diffusion XT using Asynchronous Inference on Amazon SageMaker](https://garystafford.medium.com/generative-ai-videos-with-stability-ais-stable-video-diffusion-xt-using-asynchronous-inference-on-6810e0a7cab6).
 
-## Architecture
+## Notebook Versions
 
-![Architecture](architecture/async_inference.png)
+* __Public URL for Conditioning Image__: Version 1 of the Notebook, [svd_xt_demo_v1.ipynb](svd_xt_demo_v1.ipynb), passes a publicly accessible URL of the image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v1/inference.py](inference_v1/inference.py).
+
+* __Conditioning Image Passed in Request Payload__: Version 2 of the Notebook, [svd_xt_demo_v2.ipynb](svd_xt_demo_v2.ipynb), passes an encoded image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v2/inference.py](inference_v2/inference.py).
+
+## Architecture for Version 1: Public URL for Conditioning Image
+
+![Architecture V1](architecture/async_inference_v1.png)
+
+## Architecture for Version 2: Conditioning Image Passed in Request Payload
+
+![Architecture V2](architecture/async_inference_v2.png)
 
 ## Wide-format Videos
 
@@ -62,9 +72,9 @@ All videos created using Notebook included in this project.
    </tr>
 </table>
 
-## Optional: Local Environment
+## Optional: Local Development Environment
 
-Setup local environment to modify `inference.py` file.
+Setup local environment to modify project.
 
 ```sh
 python3 -m pip install virtualenv -Uq
@@ -75,7 +85,7 @@ source svd-venv/bin/activate
 ```
 
 ```sh
-python3 -m pip install -r requirements.txt -Uq
+python3 -m pip install -r local_requirements.txt -Uq
 ```
 
 ## References

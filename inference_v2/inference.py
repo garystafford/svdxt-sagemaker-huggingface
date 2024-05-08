@@ -1,6 +1,7 @@
 import base64
 import logging
 from io import BytesIO
+from PIL import Image
 
 import torch
 from diffusers import StableVideoDiffusionPipeline
@@ -8,8 +9,8 @@ from diffusers.utils import load_image
 
 
 # Author: Gary A. Stafford
-# Purpose: Custom SageMaker inference script for SVD-XT 1.1 model
-# Date: 2024-04-28
+# Purpose: Custom SageMaker inference script for SVD-XT 1.1 model: accepts base64 encoded image
+# Date: 2024-05-08
 # License: MIT License
 # Available parameters: https://github.com/huggingface/diffusers/blob/ae05050db9d37d5af48a6cd0d6510a5ffb1c1cd4/src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py#L339
 
@@ -30,10 +31,10 @@ def model_fn(model_dir):
 
 
 def predict_fn(data, pipe):
-    logger.info(f"data: {data}")
+    # logger.info(f"data: {data}")
 
-    # get prompt & parameters
-    prompt = data.pop("inputs", data)
+    # get image and parameters
+    image_raw = data.pop("image")
     width = data.pop("width", 1024)
     height = data.pop("height", 576)
     num_frames = data.pop("num_frames", 25)
@@ -46,7 +47,8 @@ def predict_fn(data, pipe):
     decode_chunk_size = data.pop("decode_chunk_size", 8)
     seed = data.pop("seed", 42)
 
-    image = load_image(prompt)
+    image_pil = Image.open(BytesIO(base64.b64decode(image_raw)))
+    image = load_image(image_pil)
     image = image.resize((width, height))
 
     generator = torch.manual_seed(seed)
@@ -69,10 +71,10 @@ def predict_fn(data, pipe):
 
     # create response
     encoded_frames = []
-    for image in frames:
+    for frame in frames:
         buffered = BytesIO()
-        image.save(buffered, format="JPEG", quality=95, subsampling=0)
+        frame.save(buffered, format="JPEG", quality=95, subsampling=0)
         encoded_frames.append(base64.b64encode(buffered.getvalue()).decode())
 
-    # create response
+    # return response
     return {"frames": encoded_frames}
