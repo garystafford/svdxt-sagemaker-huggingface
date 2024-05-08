@@ -1,5 +1,8 @@
-diffusers==0.27.2
-torch==2.1.0
-pillow==10.3.0
 boto3
 botocore
+diffusers==0.27.2
+ffmpeg-python
+ipython
+pillow==10.3.0
+pywget
+torch==2.1.0
