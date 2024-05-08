@@ -4,13 +4,19 @@ Stability AI's [Stable Video Diffusion XT (SVT-XT) 1.1](https://stability.ai/sta
 
 For more information on using this repository, read the associated blog post, [Generative AI Videos with Stability AI’s Stable Video Diffusion XT using Asynchronous Inference on Amazon SageMaker](https://garystafford.medium.com/generative-ai-videos-with-stability-ais-stable-video-diffusion-xt-using-asynchronous-inference-on-6810e0a7cab6).
 
-Version 1 of the Notebook, [svd_xt_demo_v1.ipynb](svd_xt_demo_v1.ipynb), accepts publicly accessible URL of the image as opposed to v2 of the Notebook that accepted an image as input. Use corresponding custom inference script, [inference_v1/inference.py](inference_v1/inference.py).
+## Notebook Versions
 
-Version 2 of the Notebook, [svd_xt_demo_v2.ipynb](svd_xt_demo_v2.ipynb), accepts an image as input as opposed to original v1 of the Notebook that accepted a publicly accessible URL of the image. Use corresponding custom inference script, [inference_v2/inference.py](inference_v2/inference.py).
+* __Public URL for Conditioning Image__: Version 1 of the Notebook, [svd_xt_demo_v1.ipynb](svd_xt_demo_v1.ipynb), accepts publicly accessible URL of the image as opposed to v2 of the Notebook that accepted an image as input. Use corresponding custom inference script, [inference_v1/inference.py](inference_v1/inference.py).
 
-## Architecture
+* __Conditioning Image Passed in Request Payload__: Version 2 of the Notebook, [svd_xt_demo_v2.ipynb](svd_xt_demo_v2.ipynb), accepts an image as input as opposed to original v1 of the Notebook that accepted a publicly accessible URL of the image. The encoded image is passed in the request payload. Use corresponding custom inference script, [inference_v2/inference.py](inference_v2/inference.py).
 
-![Architecture](architecture/async_inference.png)
+## Architecture for Version 1: Public URL for Conditioning Image
+
+![Architecture V1](architecture/async_inference_v1.png)
+
+## Architecture for Version 2: Conditioning Image Passed in Request Payload
+
+![Architecture V2](architecture/async_inference_v2.png)
 
 ## Wide-format Videos
 
