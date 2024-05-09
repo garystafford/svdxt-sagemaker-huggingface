@@ -8,8 +8,8 @@ from diffusers.utils import load_image
 
 
 # Author: Gary A. Stafford
-# Purpose: Custom SageMaker inference script for SVD-XT 1.1 model: accepts image URL
-# Date: 2024-05-08
+# Purpose: Custom SageMaker inference script for SVD-XT 1.1 model: accepts image URL for conditioning image
+# Date: 2024-05-09
 # License: MIT License
 # Available parameters: https://github.com/huggingface/diffusers/blob/ae05050db9d37d5af48a6cd0d6510a5ffb1c1cd4/src/diffusers/pipelines/stable_video_diffusion/pipeline_stable_video_diffusion.py#L339
 
@@ -32,7 +32,7 @@ def model_fn(model_dir):
 def predict_fn(data, pipe):
     # logger.info(f"data: {data}")
 
-    # get image and parameters
+    # get image and inference parameters
     image_url = data.pop("image")
     width = data.pop("width", 1024)
     height = data.pop("height", 576)
