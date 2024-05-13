@@ -20,7 +20,7 @@ For more information on using this repository, read the associated blog post, [G
 
 ## Streamlit Application
 
-The project now includes an interactive Streamlit application to generate the videos. It can be started with the following command:
+The project now includes an interactive Streamlit application to generate the videos. Make sure you have first installed the required Python packages, as outlined in the [Optional: Local Development Environment](https://github.com/garystafford/svdxt-sagemaker-huggingface?tab=readme-ov-file#optional-local-development-environment) section, below. The application can be started with the following command:
 
 ```sh
 streamlit run app.py --server.runOnSave true
