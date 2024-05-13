@@ -6,9 +6,9 @@ For more information on using this repository, read the associated blog post, [G
 
 ## Notebook Versions
 
-* __Public URL for Conditioning Image__: Version 1 of the Notebook, [svd_xt_demo_v1.ipynb](svd_xt_demo_v1.ipynb), passes a publicly accessible URL of the image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v1/inference.py](inference_v1/inference.py).
+- **Public URL for Conditioning Image**: Version 1 of the Notebook, [svd_xt_demo_v1.ipynb](svd_xt_demo_v1.ipynb), passes a publicly accessible URL of the image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v1/inference.py](inference_v1/inference.py).
 
-* __Conditioning Image Passed in Request Payload__: Version 2 of the Notebook, [svd_xt_demo_v2.ipynb](svd_xt_demo_v2.ipynb), passes an encoded image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v2/inference.py](inference_v2/inference.py).
+- **Conditioning Image Passed in Request Payload**: Version 2 of the Notebook, [svd_xt_demo_v2.ipynb](svd_xt_demo_v2.ipynb), passes an encoded image in the request payload used to invoke the model. Use the corresponding custom inference script, [inference_v2/inference.py](inference_v2/inference.py).
 
 ## Architecture for Version 1: Public URL for Conditioning Image
 
@@ -17,6 +17,16 @@ For more information on using this repository, read the associated blog post, [G
 ## Architecture for Version 2: Conditioning Image Passed in Request Payload
 
 ![Architecture V2](architecture/async_inference_v2.png)
+
+## Streamlit Application
+
+The project now includes an interactive Streamlit application to generate the videos. It can be started with the following command:
+
+```sh
+streamlit run app.py --server.runOnSave true
+```
+
+![Streamlit App](architecture/stremalit_app.png)
 
 ## Wide-format Videos
 
