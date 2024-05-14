@@ -25,8 +25,8 @@ S3_BUCKET = "<YOUR_S3_BUCKET_NAME>"
 ENDPOINT_NAME = "<YOUR_SAGEMAKER_ENDPOINT_NAME>"
 
 # Local File Paths
-REQUEST_PAYLOAD = "REQUEST_PAYLOADs/payload.json"
-RESPONSE_PAYLOAD = "RESPONSE_PAYLOADs/output.json"
+REQUEST_PAYLOAD = "request_payloads/payload.json"
+RESPONSE_PAYLOAD = "response_payloads/output.json"
 
 s3_client = boto3.client("s3")
 
