@@ -21,7 +21,7 @@ from botocore.exceptions import ClientError
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
 
 # AWS Configuration - *** CHANGE ME! ***
-s3_bucket = "<YOUR_S#_BUCKET_NAME>"
+s3_bucket = "<YOUR_S3_BUCKET_NAME>"
 endpoint_name = "<YOUR_SAGEMAKER_ENDPOINT_NAME>"
 
 s3_client = boto3.client("s3")
