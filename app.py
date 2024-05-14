@@ -21,14 +21,14 @@ from botocore.exceptions import ClientError
 MAX_FILE_SIZE = 5 * 1024 * 1024  # 5MB
 
 # AWS Configuration - *** CHANGE ME! ***
-s3_bucket = "<YOUR_S3_BUCKET_NAME>"
-endpoint_name = "<YOUR_SAGEMAKER_ENDPOINT_NAME>"
-
-s3_client = boto3.client("s3")
+S3_BUCKET = "<YOUR_S3_BUCKET_NAME>"
+ENDPOINT_NAME = "<YOUR_SAGEMAKER_ENDPOINT_NAME>"
 
 # Local File Paths
-request_payload = "request_payloads/payload.json"
-response_payload = "response_payloads/output.json"
+REQUEST_PAYLOAD = "REQUEST_PAYLOADs/payload.json"
+RESPONSE_PAYLOAD = "RESPONSE_PAYLOADs/output.json"
+
+s3_client = boto3.client("s3")
 
 
 def main():
@@ -52,7 +52,7 @@ def main():
     )
 
     st.markdown("# Generative Video Creation")
-    st.markdown("### Stable Video Diffusion XT 1.1 Image-to-Video Generation")
+    st.markdown("### Stable Video Diffusion XT 1.1 Image-to-Video")
     st.markdown("---")
 
     reset_session_states()
@@ -139,7 +139,7 @@ def main():
             response_location = invoke_model(my_upload)
             get_model_response(response_location)
 
-            with open(response_payload, "r") as f:
+            with open(RESPONSE_PAYLOAD, "r") as f:
                 data = json.load(f)
             save_video_frames(data["frames"])
             convert_frames_to_video(video_path)
@@ -174,7 +174,7 @@ def reset_session_states():
 def upload_file(input_location):
     s3_client.upload_file(
         Filename=input_location,
-        Bucket=s3_bucket,
+        Bucket=S3_BUCKET,
         Key="async_inference/input/payload.json",
         ExtraArgs={"ContentType": "application/json"},
     )
@@ -209,16 +209,16 @@ def invoke_model(upload):
         "seed": st.session_state["seed"],
     }
 
-    with open(request_payload, "w", encoding="utf-8") as f:
+    with open(REQUEST_PAYLOAD, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=4)
 
-    upload_file(request_payload)
+    upload_file(REQUEST_PAYLOAD)
 
     sm_runtime_client = boto3.client("sagemaker-runtime")
 
     response = sm_runtime_client.invoke_endpoint_async(
-        EndpointName=endpoint_name,
-        InputLocation=f"s3://{s3_bucket}/async_inference/input/payload.json",
+        EndpointName=ENDPOINT_NAME,
+        InputLocation=f"s3://{S3_BUCKET}/async_inference/input/payload.json",
         InvocationTimeoutSeconds=3600,
     )
 
@@ -232,7 +232,7 @@ def get_model_response(response_location):
     while True:
         try:
             s3_client.get_object(Bucket=bucket, Key=key)
-            s3_client.download_file(Bucket=bucket, Key=key, Filename=response_payload)
+            s3_client.download_file(Bucket=bucket, Key=key, Filename=RESPONSE_PAYLOAD)
             print("Model response received.")
             return True
         except ClientError as e:
